@@ -1,53 +1,27 @@
-#1
+import time
+print(time.gmtime())#tupil define
+time.time()
+print(time.gmtime(200000))
+time.asctime() #current time
+print(time.asctime()) #accept all perameter
 
-def area(a):
-    a=3.14*a*a
-    return a
-x=int(input("enter radius:"))
-print("area of circle is:%s"%area(x))
+print(time.asctime(time.gmtime()))
+print(time.ctime(1500000))
+print(time.localtime())
 
-#2
+from datetime import date
+print(date.today()) #today date
+print(date.fromtimestamp(3452435)) #to send hidden date for that we use timestamp
 
-def perfect(n):
-    sum=0
-    for i in range (1,n):
-        if(n%i==0):
-            sum=sum+i
-    if(sum==n):
-     print("true")
-    else:
-            print("false")
-perfect(2)
+import os
+print(os.getcwd())#current working directory
+print(os.environ)#dictionary element
 
-#3
-i=1
-def table(n,i):
-    print(n*i)
-    i=i+1
-    if(i<=10):
-         table(n,i)
-table(12,i)
+#ASSIGNMENT
+import datetime
+a= "1970-12-12"
+d=datetime.datetime.strptime(a,"%Y-%m-%d")
+print(d.month)
 
-
-#4write a function to cal power of a nuber raised to other(a^b)using recursion
-base = int(input("enter base:"))
-exp = int(input("enter exponential value:"))
-def power(base,exp):
-    if(exp==1):
-        return(base)
-    if(exp!=1):
-        return(base*power(base,exp-1))
-print("result:",power(base,exp))
-
-
-#5 write a function to find the factorial of a number but also store the factorial in dictionary
-n=int(input("enter nuber"))
-def factorial(n):
-   if (n == 1):
-       return 1
-   else:
-       return (n*factorial(n-1))
-d={}
-d={n:factorial(n)}
-print(d)
-
+import datetime
+a="2012-5-4"

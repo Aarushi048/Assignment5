@@ -6,6 +6,7 @@ while(i<10):
     num=input("enter your no:")
     print("enter no is"+num)
     i=i+1
+
 #Q2
 
 i=0
