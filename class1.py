@@ -38,12 +38,20 @@ class Movie_Details():
         self.an=artist_name
         self.y=year_of_release
         self.r=rating
+    def display(self):
+        print('Movie name: ',q.n)
+        print('Artist name: ',q.an)
+        print('year of release: ',q.y)
+        print('ratting: ',q.r)
 q=Movie_Details('3 Iditios','Amir',2008,6)
-print('Movie name: ',q.n)
-print('Artist name: ',q.an)
-print('year of release: ',q.y)
-print('ratting: ',q.r)
-
+#update function
+print("updated data is")
+q.n="sonu ke titu sweety"
+q.an="kartik"
+q.y=2018
+q.r=4
+q.display()
+print('\n')
 #Q5
 class Expenditure():
     def __init__(self,expenditure,saving):
